@@ -19,13 +19,13 @@ def encryption(string, key):
     return ("" . join(cipher_text))
 def decryption(cipher_text, key): 
     pl_text = [] 
-	  cipher_text=cipher_text.upper()
-	  for i in range(len(cipher_text)):
-		    x = (ord(cipher_text[i]) - ord(key[i]) + 26) % 26
-		    x += ord('A') 
-		    pl_text.append(chr(x))
-		    if i!=0:
-			      pl_text[i]=pl_text[i].lower()
+    cipher_text=cipher_text.upper()
+    for i in range(len(cipher_text)):
+	x = (ord(cipher_text[i]) - ord(key[i]) + 26) % 26
+	x += ord('A') 
+	pl_text.append(chr(x))
+	if i!=0:
+	    pl_text[i]=pl_text[i].lower()
     return("".join(pl_text))
 while True:
     choice=int(input("Enter 1 for encryption and 2 for decryption: "))
